@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+    }
+    
+    .login-card {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    .login-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .left-panel {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .left-panel::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 60%);
+      animation: rotate 30s linear infinite;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .input-field {
+      transition: all 0.3s ease;
+      border-width: 1px;
+      border-color: #e5e7eb;
+      background-color: #1e293b;
+      color: white;
+    }
+    
+    .input-field::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .input-field:focus {
+      border-color: #4f46e5;
+      box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    }
+    
+    .feature-card {
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .login-btn {
+      background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .login-btn:hover {
+      background: linear-gradient(90deg, #4338ca 0%, #6d28d9 100%);
+    }
+    
+    .floating-bubbles span {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .floating-bubbles span:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+    
+    .floating-bubbles span:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .welcome-text {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
